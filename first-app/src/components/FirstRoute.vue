@@ -1,7 +1,7 @@
 <template>
   <div class="test">
     <span v-html="title"></span>
-    <p>{{user.firstName}} {{user.lastName}}</p>
+    <p v-if="active">{{user.firstName}} {{user.lastName}}</p>
   </div>
 </template>
 
@@ -14,7 +14,8 @@
         user: {
           firstName: 'Joel',
           lastName: 'Myers'
-        }
+        },
+        active: false
       }
     }
   }
