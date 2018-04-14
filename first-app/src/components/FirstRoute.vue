@@ -1,6 +1,8 @@
 <template>
   <div class="test">
-    <span v-html="title"></span>
+    <span ></span>
+    <input type="text" v-model="title"><br />
+    <h1 v-html="title"></h1>
     <p v-if="active">{{user.firstName}} {{user.lastName}}</p>
     <p v-else>Nothin</p>
     <ul>
@@ -14,7 +16,7 @@
     name: 'test',
     data() {
       return {
-        title: '<h1>Hello there</h1>',
+        title: 'Input title here',
         user: {
           firstName: 'Joel',
           lastName: 'Myers'
