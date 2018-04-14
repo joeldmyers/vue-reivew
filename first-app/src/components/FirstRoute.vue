@@ -8,6 +8,8 @@
     <ul>
       <li v-for="item in items">{{item.title}}</li>
     </ul>
+
+    <button v-on:click="greet">Say Greeting</button>
   </div>
 </template>
 
@@ -28,6 +30,11 @@
           {title: 'title 3'}
         ]
       }
+    },
+    methods: {
+    greet: function () {
+      console.log('hello');
+    }
     }
   }
 </script>
